@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20240117031658"
+  },
+  "applications": "*",
+  "clientRootFolder": "RosterMicroV1",
+  "databaseType": "sql",
+  "entityTableName": "resource",
+  "fields": [
+    {
+      "fieldName": "key",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "firstName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "teamRole",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "exchangeAllowed",
+      "fieldType": "Boolean"
+    }
+  ],
+  "microserviceName": "RosterMicroV1",
+  "name": "Resource",
+  "relationships": [
+    {
+      "otherEntityField": "key",
+      "otherEntityName": "team",
+      "relationshipName": "team",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

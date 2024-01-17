@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20240117031558"
+  },
+  "applications": "*",
+  "clientRootFolder": "RosterMicroV1",
+  "databaseType": "sql",
+  "entityTableName": "team_plan",
+  "fields": [],
+  "microserviceName": "RosterMicroV1",
+  "name": "TeamPlan",
+  "relationships": [
+    {
+      "otherEntityField": "key",
+      "otherEntityName": "team",
+      "relationshipName": "team",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "key",
+      "otherEntityName": "shift",
+      "relationshipName": "shift",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

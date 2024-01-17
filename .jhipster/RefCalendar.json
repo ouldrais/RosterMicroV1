@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240117032258"
+  },
+  "applications": "*",
+  "clientRootFolder": "RosterMicroV1",
+  "databaseType": "sql",
+  "entityTableName": "ref_calendar",
+  "fields": [
+    {
+      "fieldName": "key",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "RosterMicroV1",
+  "name": "RefCalendar",
+  "relationships": [
+    {
+      "otherEntityField": "key",
+      "otherEntityName": "shiftType",
+      "relationshipName": "shiftType",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}
