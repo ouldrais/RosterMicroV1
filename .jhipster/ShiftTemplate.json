@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20240117032958"
+  },
+  "applications": "*",
+  "clientRootFolder": "RosterMicroV1",
+  "databaseType": "sql",
+  "entityTableName": "shift_template",
+  "fields": [
+    {
+      "fieldName": "key",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "shiftStart",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "shiftEnd",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    }
+  ],
+  "microserviceName": "RosterMicroV1",
+  "name": "ShiftTemplate",
+  "relationships": [],
+  "searchEngine": "no"
+}

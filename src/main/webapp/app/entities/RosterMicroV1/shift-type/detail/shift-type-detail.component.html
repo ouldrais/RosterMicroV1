@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (shiftType) {
+      <div>
+        <h2 data-cy="shiftTypeDetailsHeading">
+          <span jhiTranslate="rosterMicroV1App.rosterMicroV1ShiftType.detail.title">Shift Type</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="rosterMicroV1App.rosterMicroV1ShiftType.key">Key</span></dt>
+          <dd>
+            <span>{{ shiftType.key }}</span>
+          </dd>
+          <dt><span jhiTranslate="rosterMicroV1App.rosterMicroV1ShiftType.id">Id</span></dt>
+          <dd>
+            <span>{{ shiftType.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="rosterMicroV1App.rosterMicroV1ShiftType.start">Start</span></dt>
+          <dd>
+            <span>{{ shiftType.start | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="rosterMicroV1App.rosterMicroV1ShiftType.end">End</span></dt>
+          <dd>
+            <span>{{ shiftType.end | formatMediumDatetime }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/rostermicrov1/shift-type', shiftType.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

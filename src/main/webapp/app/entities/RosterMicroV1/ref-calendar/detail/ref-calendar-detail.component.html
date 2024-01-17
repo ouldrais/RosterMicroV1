@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (refCalendar) {
+      <div>
+        <h2 data-cy="refCalendarDetailsHeading">
+          <span jhiTranslate="rosterMicroV1App.rosterMicroV1RefCalendar.detail.title">Ref Calendar</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="rosterMicroV1App.rosterMicroV1RefCalendar.key">Key</span></dt>
+          <dd>
+            <span>{{ refCalendar.key }}</span>
+          </dd>
+          <dt><span jhiTranslate="rosterMicroV1App.rosterMicroV1RefCalendar.id">Id</span></dt>
+          <dd>
+            <span>{{ refCalendar.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="rosterMicroV1App.rosterMicroV1RefCalendar.status">Status</span></dt>
+          <dd>
+            <span>{{ refCalendar.status }}</span>
+          </dd>
+          <dt><span jhiTranslate="rosterMicroV1App.rosterMicroV1RefCalendar.shiftType">Shift Type</span></dt>
+          <dd>
+            @if (refCalendar.shiftType) {
+              <div>
+                <a [routerLink]="['/shift-type', refCalendar.shiftType.id, 'view']">{{ refCalendar.shiftType.key }}</a>
+              </div>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/rostermicrov1/ref-calendar', refCalendar.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

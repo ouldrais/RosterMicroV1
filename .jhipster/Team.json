@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240117031458"
+  },
+  "applications": "*",
+  "clientRootFolder": "RosterMicroV1",
+  "databaseType": "sql",
+  "entityTableName": "team",
+  "fields": [
+    {
+      "fieldName": "key",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "id",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "RosterMicroV1",
+  "name": "Team",
+  "relationships": [],
+  "searchEngine": "no"
+}
